@@ -3,15 +3,15 @@
 #define INCLUDE_TREE_H_
 
 class Tree {
-  private:
-    struct Node {
-      char value;
-      std::vector<Node*> leaf;
-    };
-    Node* root;
-    std::string p[30] = { "" };
-    void buildTree(Node*, std::vector<char>);
-    void perm(Node*, std::string);
+ private:
+  struct Node {
+    char value;
+    std::vector<Node*> leaf;
+  };
+  Node* root;
+  std::string p[30] = { "" };
+  void buildTree(Node*, std::vector<char>);
+  void perm(Node*, std::string);
 
   public:
     explicit Tree(std::vector<char> v) {
