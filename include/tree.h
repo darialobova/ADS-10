@@ -4,6 +4,7 @@
 
 #include <vector>
 #include <string>
+
 class Tree {
  private:
   struct Node {
@@ -14,16 +15,17 @@ class Tree {
   std::string p[30] = { "" };
   void buildTree(Node*, std::vector<char>);
   void permutation(Node*, std::string);
-  public:
-    explicit Tree(std::vector<char> v) {
-      root = new Node;
-      root -> value = 'x';
-      buildTree(root, v);
-      permutation(root, "");
-    }
-    std::string gPermut(int i) const {
-      return p[x - 1];
-    }
+
+ public:
+  explicit Tree(std::vector<char> v) {
+    root = new Node;
+    root -> value = 'x';
+    buildTree(root, v);
+    permutation(root, "");
+  }
+  std::string gPermut(int i) const {
+    return p[x - 1];
+  }
 };
 
 void Tree::buildTree(Node* root, std::vector<char> link) {
