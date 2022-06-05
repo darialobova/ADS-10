@@ -28,7 +28,7 @@ class Tree {
     }
 };
 
-void buildTree(Node* root, std::vector<char> link) {
+void Tree::buildTree(Node* root, std::vector<char> link) {
   if (!link.size()) {
     return;
   }
