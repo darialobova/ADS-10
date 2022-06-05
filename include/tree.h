@@ -23,7 +23,7 @@ class Tree {
     buildTree(root, v);
     permutation(root, "");
   }
-  std::string gPermut(int i) const {
+  std::string gPermut(int x) const {
     return p[x - 1];
   }
 };
@@ -51,13 +51,13 @@ void Tree::buildTree(Node* root, std::vector<char> link) {
   }
 }
 
-void Tree::permutation(Node* root, std::string symbol) {
-  if (!root->symbol.size()) {
-    symbol += root->value;
+void Tree::permutation(Node* root, std::string leaf) {
+  if (!root->leaf.size()) {
+    leaf += root->value;
     int z = 0;
     while (true) {
       if (p[z] == "") {
-        p[z] = symbol;
+        p[z] = leaf;
         break;
       } else {
         ++z;
@@ -66,10 +66,10 @@ void Tree::permutation(Node* root, std::string symbol) {
     return;
   }
   if (root->value != 'x') {
-    symbol += root->value;
+    leaf += root->value;
   }
-  for (int x = 0; x < root->symbol.size(); ++x) {
-    permutation(root->symbol[x], symbol);
+  for (int x = 0; x < root->leaf.size(); ++x) {
+    permutation(root->leaf[x], leaf);
   }
 }
 
