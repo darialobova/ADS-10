@@ -4,7 +4,6 @@
 
 #include <vector>
 #include <string>
-
 class Tree {
  private:
   struct Node {
@@ -15,7 +14,6 @@ class Tree {
   std::string p[30] = { "" };
   void buildTree(Node*, std::vector<char>);
   void permutation(Node*, std::string);
-
   public:
     explicit Tree(std::vector<char> v) {
       root = new Node;
