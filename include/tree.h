@@ -14,17 +14,17 @@ class Tree {
   Node* root;
   std::string p[30] = { "" };
   void buildTree(Node*, std::vector<char>);
-  void perm(Node*, std::string);
+  void permutation(Node*, std::string);
 
   public:
     explicit Tree(std::vector<char> v) {
       root = new Node;
       root -> value = 'x';
       buildTree(root, v);
-      perm(root, "");
+      permutation(root, "");
     }
     std::string gPermut(int i) const {
-      return p[i - 1];
+      return p[x - 1];
     }
 };
 
@@ -68,8 +68,8 @@ void Tree::permutation(Node* root, std::string symbol) {
   if (root->value != 'x') {
     symbol += root->value;
   }
-  for (int i = 0; i < root->symbol.size(); ++i) {
-    permutation(root->symbol[i], symbol);
+  for (int x = 0; x < root->symbol.size(); ++x) {
+    permutation(root->symbol[x], symbol);
   }
 
 }
