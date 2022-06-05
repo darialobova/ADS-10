@@ -6,10 +6,19 @@
 #include  "tree.h"
 
 std::vector<char> getPerm(const Tree& tree, int n) {
-  std::string perm = tree[n - 1];
   std::vector<char> g;
-  for (int x = 0; x < perm.length(); x++) {
-    g.push_back(perm[x]);
+  std::string permutation = tree.gPermut(n);
+  if (permutation.length() == 0) {
+    return g;
   }
-  return g;
+  g.resize(permutation.length(), ' ');
+  int x = 0;
+  while (true) {
+    if (permutation.length() == 0) {
+      return g;
+    } else {
+      g[x++] = permutation[0];
+      permutation.erase(permutation.begin());
+    }
+  }
 }
