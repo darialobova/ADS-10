@@ -2,6 +2,9 @@
 #ifndef INCLUDE_TREE_H_
 #define INCLUDE_TREE_H_
 
+#include <vector>
+#include <string>
+
 class Tree {
  private:
   struct Node {
@@ -12,6 +15,7 @@ class Tree {
   std::string p[30] = { "" };
   void buildTree(Node*, std::vector<char>);
   void perm(Node*, std::string);
+
   public:
     explicit Tree(std::vector<char> v) {
       root = new Node;
