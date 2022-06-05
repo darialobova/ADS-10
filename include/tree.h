@@ -71,7 +71,6 @@ void Tree::permutation(Node* root, std::string symbol) {
   for (int x = 0; x < root->symbol.size(); ++x) {
     permutation(root->symbol[x], symbol);
   }
-
 }
 
 #endif  // INCLUDE_TREE_H_
