@@ -12,7 +12,6 @@ class Tree {
   std::string p[30] = { "" };
   void buildTree(Node*, std::vector<char>);
   void perm(Node*, std::string);
-
   public:
     explicit Tree(std::vector<char> v) {
       root = new Node;
